@@ -1,7 +1,4 @@
-package com.entity;
-
-import java.math.BigDecimal;
-import java.util.List;
+package com.restful_grad_task.shopping.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,14 +19,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 
-public class Cart {
+
+public class Product {
     // Class member will uniquely identify the entity
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cart_id")
-    private Long cartId;
-    private String usderId;
-    private List<Product> productsInCart;
-    private Boolean couponApplied;
-    private BigDecimal finalAmountToBePaid;
+    @Column(name = "prod_id")
+    private Long prodId;
+    @Column
+    private String prodName;
+    @Column
+    private String colour;
+    @Column
+    private String size;
+    @Column
+    private Boolean onSale;
+    @Column
+    private String description;
 }
+
